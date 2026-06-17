@@ -1,28 +1,35 @@
+
+import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
+import profile from "../../assets/images/profile.jpeg";
 import heroData from "../../data/heroData";
+
 import Container from "../common/Container";
+
 
 function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center bg-gradient-to-br from-orange-50 via-white to-orange-100"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100"
     >
       <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side */}
 
-          {/* Left */}
-
-          <div>
-
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <p className="text-orange-500 font-semibold text-lg">
               {heroData.greeting}
             </p>
 
-            <h1 className="text-5xl lg:text-7xl font-extrabold mt-2">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2 leading-tight">
               {heroData.name}
             </h1>
 
@@ -39,20 +46,45 @@ function Hero() {
               ]}
               speed={40}
               repeat={Infinity}
-              className="text-2xl text-orange-500 font-bold mt-6 block"
+              className="text-2xl md:text-3xl text-orange-500 font-bold mt-6 block"
             />
 
             <p className="text-gray-600 mt-6 leading-8 max-w-xl">
               {heroData.description}
             </p>
 
-            <div className="flex gap-5 mt-8">
+            <div className="flex flex-wrap gap-5 mt-10">
 
-              <button className="bg-orange-500 text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition">
+              <button
+                className="
+                bg-orange-500
+                text-white
+                px-7
+                py-3
+                rounded-xl
+                shadow-lg
+                hover:bg-orange-600
+                hover:scale-105
+                transition
+                duration-300
+                "
+              >
                 Hire Me
               </button>
 
-              <button className="border border-orange-500 px-6 py-3 rounded-xl hover:bg-orange-50 transition">
+              <button
+                className="
+                border-2
+                border-orange-500
+                px-7
+                py-3
+                rounded-xl
+                hover:bg-orange-100
+                hover:scale-105
+                transition
+                duration-300
+                "
+              >
                 View Projects
               </button>
 
@@ -60,41 +92,61 @@ function Hero() {
 
             <div className="flex gap-6 text-2xl mt-10 text-gray-700">
 
-              <a href={heroData.github}>
+              <a
+                href={heroData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-500 hover:scale-125 transition"
+              >
                 <FaGithub />
               </a>
 
-              <a href={heroData.linkedin}>
+              <a
+                href={heroData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-orange-500 hover:scale-125 transition"
+              >
                 <FaLinkedin />
               </a>
 
-              <a href={heroData.email}>
+              <a
+                href={heroData.email}
+                className="hover:text-orange-500 hover:scale-125 transition"
+              >
                 <FaEnvelope />
               </a>
 
             </div>
 
-          </div>
+          </motion.div>
 
-          {/* Right */}
+          {/* Right Side */}
 
-          <div className="flex justify-center">
-
-            <div className="w-[320px] h-[320px] rounded-full bg-orange-200 flex items-center justify-center shadow-2xl">
-
-              <span className="text-8xl">
-                👨‍💻
-              </span>
-
-            </div>
-
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="flex justify-center"
+          >
+            <div className="relative flex justify-center items-center"> {/* Background Glow */} <div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] bg-orange-300 rounded-full blur-3xl opacity-25"></div> {/* Profile Image */} <img src={profile} alt="Profile" className=" relative w-[280px] h-[280px] md:w-[340px] md:h-[340px] lg:w-[400px] lg:h-[400px] rounded-full object-cover border-4 border-white shadow-2xl hover:scale-105 transition duration-500 " /> </div>
+          </motion.div>
 
         </div>
-
       </Container>
+
+      {/* Scroll Down */}
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-3xl text-orange-500">
+
+        <a href="#stats">
+          ↓
+        </a>
+
+      </div>
     </section>
   );
 }
 
 export default Hero;
+
