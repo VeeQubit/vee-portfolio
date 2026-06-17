@@ -9,7 +9,7 @@ import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import TechStack from "./components/sections/TechStack";
 import Contact from "./components/sections/Contact";
-
+import Footer from "./components/layout/Footer";
 function App() {
   return (
     <>
@@ -24,6 +24,7 @@ function App() {
       <Education />
       <TechStack />
       <Contact />
+      <Footer />
     </>
   );
 }
