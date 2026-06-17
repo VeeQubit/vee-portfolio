@@ -3,6 +3,7 @@ import Hero from "./components/sections/Hero";
 import Stats from "./components/sections/Stats";
 import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
+import Services from "./components/sections/Services";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Stats />
       <About />
       <Skills />
+      <Services />
+
     </>
   );
 }
