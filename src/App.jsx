@@ -7,6 +7,9 @@ import Services from "./components/sections/Services";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
+import TechStack from "./components/sections/TechStack";
+
+
 function App() {
   return (
     <>
@@ -19,6 +22,7 @@ function App() {
       <Projects />
       <Experience />
       <Education />
+      <TechStack />
     </>
   );
 }
