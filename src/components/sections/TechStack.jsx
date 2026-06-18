@@ -6,56 +6,87 @@ function TechStack() {
   return (
     <section
       id="tech"
-      className="py-24 bg-orange-50"
+      className="relative py-24 bg-transparent overflow-hidden"
     >
-      <Container>
+      {/* Background Glow */}
 
-        <div className="text-center">
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          -translate-x-1/2
+          -translate-y-1/2
+          w-[650px]
+          h-[650px]
+          rounded-full
+          bg-[#65CCB8]
+          blur-[140px]
+          opacity-10
+          pointer-events-none
+          z-0
+        "
+      ></div>
 
-          <p className="text-orange-500 font-semibold uppercase">
-            Tech Stack
-          </p>
+      <div className="relative z-10">
 
-          <h2 className="text-5xl font-bold mt-2">
-            Tools & Technologies
-          </h2>
+        <Container>
 
-          <p className="text-gray-500 mt-4">
-            Technologies I use to build modern applications.
-          </p>
+          <div className="text-center">
 
-        </div>
+            <p className="text-[#57BA98] font-semibold uppercase">
+              Tech Stack
+            </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-16">
+            <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
+              Tools & Technologies
+            </h2>
 
-          {techStack.map((tech) => (
+            <p className="text-gray-500 mt-4">
+              Technologies I use to build modern applications.
+            </p>
 
-            <motion.div
-              key={tech}
-              whileHover={{
-                y: -8,
-                scale: 1.05,
-              }}
-              className="
-                bg-white
-                rounded-2xl
-                shadow-lg
-                p-6
-                text-center
-              "
-            >
+          </div>
 
-              <h3 className="font-semibold">
-                {tech}
-              </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-16">
 
-            </motion.div>
+            {techStack.map((tech) => (
 
-          ))}
+              <motion.div
+                key={tech}
+                whileHover={{
+                  y: -8,
+                  scale: 1.05,
+                }}
+                className="
+                  bg-white/65
+                  backdrop-blur-xl
+                  rounded-2xl
+                  shadow-lg
+                  border
+                  border-[#E8F8F3]
+                  p-6
+                  text-center
+                  hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+                  transition-all
+                  duration-300
+                "
+              >
 
-        </div>
+                <h3 className="font-semibold text-[#2D3748]">
+                  {tech}
+                </h3>
 
-      </Container>
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </Container>
+
+      </div>
+
     </section>
   );
 }

@@ -29,7 +29,6 @@ function Contact() {
       )
       .then(() => {
         toast.success("Message sent successfully!");
-
         form.current.reset();
       })
       .catch(() => {
@@ -40,17 +39,17 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-white"
+      className="py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center mb-16">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             Contact
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Get In Touch
           </h2>
 
@@ -60,24 +59,24 @@ function Contact() {
 
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-14">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Left */}
 
           <div className="space-y-8">
 
             <div className="flex items-center gap-4">
-              <FaEnvelope className="text-orange-500 text-2xl" />
+              <FaEnvelope className="text-[#57BA98] text-2xl" />
               <span>{contactData.email}</span>
             </div>
 
             <div className="flex items-center gap-4">
-              <FaPhone className="text-orange-500 text-2xl" />
+              <FaPhone className="text-[#57BA98] text-2xl" />
               <span>{contactData.phone}</span>
             </div>
 
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-orange-500 text-2xl" />
+              <FaMapMarkerAlt className="text-[#57BA98] text-2xl" />
               <span>{contactData.location}</span>
             </div>
 
@@ -87,7 +86,7 @@ function Contact() {
                 href={contactData.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-500 hover:scale-110 transition"
+                className="hover:text-[#57BA98] hover:scale-110 transition"
               >
                 <FaGithub />
               </a>
@@ -96,7 +95,7 @@ function Contact() {
                 href={contactData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-orange-500 hover:scale-110 transition"
+                className="hover:text-[#57BA98] hover:scale-110 transition"
               >
                 <FaLinkedin />
               </a>
@@ -107,92 +106,128 @@ function Contact() {
 
           {/* Right */}
 
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="space-y-5"
-          >
+          <div className="relative">
 
-            <input
-              type="text"
-              name="from_name"
-              placeholder="Your Name"
-              required
+            {/* Mint Glow */}
+
+            <div
               className="
-                w-full
-                p-4
-                rounded-xl
-                border
-                outline-none
-                focus:border-orange-500
+              absolute
+              -inset-6
+              bg-[#65CCB8]
+              rounded-full
+              blur-3xl
+              opacity-20
+              -z-10
               "
-            />
+            ></div>
 
-            <input
-              type="email"
-              name="from_email"
-              placeholder="Your Email"
-              required
+            <form
+              ref={form}
+              onSubmit={sendEmail}
               className="
-                w-full
-                p-4
-                rounded-xl
+                space-y-5
+                bg-white/70
+                backdrop-blur-md
+                p-8
+                rounded-3xl
+                shadow-xl
                 border
-                outline-none
-                focus:border-orange-500
-              "
-            />
-
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              required
-              className="
-                w-full
-                p-4
-                rounded-xl
-                border
-                outline-none
-                focus:border-orange-500
-              "
-            />
-
-            <textarea
-              name="message"
-              rows="6"
-              placeholder="Your Message"
-              required
-              className="
-                w-full
-                p-4
-                rounded-xl
-                border
-                outline-none
-                resize-none
-                focus:border-orange-500
-              "
-            ></textarea>
-
-            <button
-              type="submit"
-              className="
-                bg-orange-500
-                hover:bg-orange-600
-                hover:scale-105
-                transition
-                duration-300
-                text-white
-                px-8
-                py-3
-                rounded-xl
-                shadow-lg
+                border-white/40
               "
             >
-              Send Message
-            </button>
 
-          </form>
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  bg-white/80
+                  focus:border-[#57BA98]
+                "
+              />
+
+              <input
+                type="email"
+                name="from_email"
+                placeholder="Your Email"
+                required
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  bg-white/80
+                  focus:border-[#57BA98]
+                "
+              />
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  bg-white/80
+                  focus:border-[#57BA98]
+                "
+              />
+
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                required
+                className="
+                  w-full
+                  p-4
+                  rounded-xl
+                  border
+                  border-gray-200
+                  outline-none
+                  resize-none
+                  bg-white/80
+                  focus:border-[#57BA98]
+                "
+              ></textarea>
+
+              <button
+                type="submit"
+                className="
+                  bg-[#57BA98]
+                  hover:bg-[#65CCB8]
+                  hover:scale-105
+                  transition
+                  duration-300
+                  text-white
+                  px-8
+                  py-3
+                  rounded-xl
+                  shadow-lg
+                  w-full
+                "
+              >
+                Send Message
+              </button>
+
+            </form>
+
+          </div>
 
         </div>
 

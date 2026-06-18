@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { FaGraduationCap, FaCertificate } from "react-icons/fa";
 
@@ -9,17 +10,17 @@ function Education() {
   return (
     <section
       id="education"
-      className="py-24 bg-white"
+      className="py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center mb-16">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             Education & Certifications
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Learning Journey
           </h2>
 
@@ -33,14 +34,22 @@ function Education() {
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-orange-50 rounded-3xl p-8 shadow-lg"
+            className="
+              bg-white/70
+              backdrop-blur-md
+              rounded-3xl
+              p-8
+              shadow-lg
+              border
+              border-white/40
+            "
           >
 
             <div className="flex items-center gap-3 mb-6">
 
-              <FaGraduationCap className="text-orange-500 text-3xl" />
+              <FaGraduationCap className="text-[#57BA98] text-3xl" />
 
-              <h3 className="text-3xl font-bold">
+              <h3 className="text-3xl font-bold text-[#2D3748]">
                 Education
               </h3>
 
@@ -50,7 +59,7 @@ function Education() {
 
               <div key={index}>
 
-                <h4 className="text-2xl font-semibold">
+                <h4 className="text-2xl font-semibold text-[#2D3748]">
                   {item.degree}
                 </h4>
 
@@ -78,14 +87,22 @@ function Education() {
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-orange-50 rounded-3xl p-8 shadow-lg"
+            className="
+              bg-white/70
+              backdrop-blur-md
+              rounded-3xl
+              p-8
+              shadow-lg
+              border
+              border-white/40
+            "
           >
 
             <div className="flex items-center gap-3 mb-6">
 
-              <FaCertificate className="text-orange-500 text-3xl" />
+              <FaCertificate className="text-[#57BA98] text-3xl" />
 
-              <h3 className="text-3xl font-bold">
+              <h3 className="text-3xl font-bold text-[#2D3748]">
                 Certifications
               </h3>
 
@@ -98,10 +115,15 @@ function Education() {
                 <div
                   key={item}
                   className="
-                    bg-white
+                    bg-[#E8F8F3]
+                    text-[#2D3748]
                     p-4
                     rounded-xl
                     shadow
+                    transition
+                    duration-300
+                    hover:bg-[#57BA98]
+                    hover:text-white
                   "
                 >
                   {item}
@@ -121,3 +143,4 @@ function Education() {
 }
 
 export default Education;
+

@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 import skills from "../../data/skills";
@@ -7,17 +8,17 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 bg-white"
+      className="py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             My Skills
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Technologies I Work With
           </h2>
 
@@ -37,16 +38,25 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              whileHover={{ y: -5 }}
+              whileHover={{
+                y: -8,
+                scale: 1.01,
+              }}
               className="
-                bg-orange-50
+                bg-white/65
+                backdrop-blur-xl
                 rounded-3xl
                 p-8
                 shadow-lg
+                border
+                border-[#E8F8F3]
+                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+                transition-all
+                duration-300
               "
             >
 
-              <h3 className="text-2xl font-bold mb-6">
+              <h3 className="text-2xl font-bold mb-6 text-[#2D3748]">
                 {group.category}
               </h3>
 
@@ -57,14 +67,18 @@ function Skills() {
                   <span
                     key={item}
                     className="
-                      bg-white
+                      bg-[#E8F8F3]
+                      text-[#57BA98]
                       px-5
                       py-2
                       rounded-full
-                      shadow
-                      hover:bg-orange-500
+                      shadow-sm
+                      cursor-default
+                      hover:bg-[#57BA98]
                       hover:text-white
-                      transition
+                      hover:shadow-md
+                      transition-all
+                      duration-300
                     "
                   >
                     {item}
@@ -86,3 +100,4 @@ function Skills() {
 }
 
 export default Skills;
+

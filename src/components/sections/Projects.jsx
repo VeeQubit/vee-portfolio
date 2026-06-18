@@ -9,22 +9,23 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 bg-white"
+      className="py-24 bg-transparent"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             Portfolio
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Featured Projects
           </h2>
 
           <p className="text-gray-500 mt-4">
-            Some projects that demonstrate my technical skills and practical experience.
+            Some projects that demonstrate my technical skills and practical
+            experience.
           </p>
 
         </div>
@@ -39,13 +40,18 @@ function Projects() {
                 y: -10,
               }}
               className="
-                bg-white
-                rounded-3xl
-                overflow-hidden
-                shadow-lg
-                hover:shadow-2xl
-                transition
-              "
+  bg-[#E8F8F3]
+  backdrop-blur-xl
+  rounded-3xl
+  overflow-hidden
+  shadow-lg
+  border
+  border-[#E8F8F3]
+  hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+  hover:-translate-y-2
+  transition-all
+  duration-300
+"
             >
 
               <img
@@ -55,12 +61,15 @@ function Projects() {
                   w-full
                   h-56
                   object-cover
+                  hover:scale-105
+transition
+duration-500
                 "
               />
 
               <div className="p-6">
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="text-2xl font-bold text-[#2D3748]">
                   {project.title}
                 </h3>
 
@@ -75,8 +84,8 @@ function Projects() {
                     <span
                       key={tech}
                       className="
-                        bg-orange-100
-                        text-orange-600
+                        bg-[#E8F8F3]
+                        text-[#57BA98]
                         px-3
                         py-1
                         rounded-full
@@ -98,7 +107,7 @@ function Projects() {
                     rel="noreferrer"
                     className="
                       flex-1
-                      bg-orange-500
+                      bg-[#57BA98]
                       text-white
                       py-3
                       rounded-xl
@@ -106,12 +115,11 @@ function Projects() {
                       justify-center
                       items-center
                       gap-2
-                      hover:bg-orange-600
+                      hover:bg-[#65CCB8]
                       transition
                     "
                   >
                     <FaGithub />
-
                     GitHub
                   </a>
 
@@ -122,19 +130,18 @@ function Projects() {
                     className="
                       flex-1
                       border
-                      border-orange-500
+                      border-[#57BA98]
                       py-3
                       rounded-xl
                       flex
                       justify-center
                       items-center
                       gap-2
-                      hover:bg-orange-50
+                      hover:bg-[#E8F8F3]
                       transition
                     "
                   >
                     <FaExternalLinkAlt />
-
                     Demo
                   </a>
 

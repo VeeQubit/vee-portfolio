@@ -23,17 +23,17 @@ function Services() {
   return (
     <section
       id="services"
-      className="py-24 bg-orange-50"
+      className="relative py-24 bg-transparent overflow-hidden"
     >
       <Container>
 
         <div className="text-center">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             What I Do
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Areas of Expertise
           </h2>
 
@@ -43,7 +43,29 @@ function Services() {
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        {/* Mint Glow */}
+
+        <div
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            -translate-x-1/2
+            -translate-y-1/2
+            w-[650px]
+            h-[650px]
+            rounded-full
+            bg-[#65CCB8]
+            blur-[140px]
+            opacity-15
+            pointer-events-none
+            -z-10
+          "
+        ></div>
+
+        {/* Cards */}
+
+        <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
 
           {services.map((service, index) => (
 
@@ -51,21 +73,28 @@ function Services() {
               key={index}
               whileHover={{
                 y: -10,
+                scale: 1.02,
               }}
               className="
-                bg-white
+                bg-white/65
+                backdrop-blur-xl
                 p-8
                 rounded-3xl
                 shadow-lg
                 text-center
+                border
+                border-[#E8F8F3]
+                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+                transition-all
+                duration-300
               "
             >
 
-              <div className="text-5xl text-orange-500 mb-6 flex justify-center">
+              <div className="text-5xl text-[#57BA98] mb-6 flex justify-center">
                 {icons[index]}
               </div>
 
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-[#2D3748]">
                 {service.title}
               </h3>
 

@@ -8,7 +8,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 bg-orange-50"
+      className="py-24 bg-transparent"
     >
       <Container>
 
@@ -16,11 +16,11 @@ function Experience() {
 
         <div className="text-center mb-16">
 
-          <p className="text-orange-500 font-semibold uppercase">
+          <p className="text-[#57BA98] font-semibold uppercase">
             Experience
           </p>
 
-          <h2 className="text-5xl font-bold mt-2">
+          <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
             Professional Journey
           </h2>
 
@@ -44,13 +44,16 @@ function Experience() {
               transition={{ duration: 0.6 }}
               className="
                 relative
-                bg-white
+                bg-white/70
+                backdrop-blur-md
                 rounded-3xl
                 shadow-lg
                 p-8
                 mb-10
                 border-l-4
-                border-orange-500
+                border-[#57BA98]
+                border
+                border-white/40
               "
             >
 
@@ -62,15 +65,15 @@ function Experience() {
                   w-5
                   h-5
                   rounded-full
-                  bg-orange-500
+                  bg-[#57BA98]
                 "
               ></span>
 
-              <p className="text-orange-500 font-semibold">
+              <p className="text-[#57BA98] font-semibold">
                 {item.duration}
               </p>
 
-              <h3 className="text-3xl font-bold mt-2">
+              <h3 className="text-3xl font-bold mt-2 text-[#2D3748]">
                 {item.position}
               </h3>
 
@@ -89,13 +92,17 @@ function Experience() {
                   <span
                     key={skill}
                     className="
-                      bg-orange-100
-                      text-orange-600
+                      bg-[#E8F8F3]
+                      text-[#57BA98]
                       px-4
                       py-2
                       rounded-full
                       text-sm
                       font-medium
+                      transition
+                      duration-300
+                      hover:bg-[#57BA98]
+                      hover:text-white
                     "
                   >
                     {skill}

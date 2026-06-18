@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -10,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-28 bg-white"
+      className="py-28 bg-transparent"
     >
       <Container>
 
@@ -28,15 +29,25 @@ function About() {
 
             <div className="relative flex justify-center">
 
-  <div className="absolute w-72 h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+              <div
+                className="
+                absolute
+                w-72
+                h-72
+                bg-[#E8F8F3]
+                rounded-full
+                blur-3xl
+                opacity-40
+                "
+              ></div>
 
-  <img
-    src={developer}
-    alt="Developer Illustration"
-    className="relative max-w-md w-full"
-  />
+              <img
+                src={developer}
+                alt="Developer Illustration"
+                className="relative max-w-md w-full"
+              />
 
-</div>
+            </div>
 
           </motion.div>
 
@@ -49,11 +60,11 @@ function About() {
             viewport={{ once: true }}
           >
 
-            <h5 className="text-orange-500 font-semibold">
+            <h5 className="text-[#57BA98] font-semibold">
               ABOUT ME
             </h5>
 
-            <h2 className="text-5xl font-bold mt-3">
+            <h2 className="text-5xl font-bold mt-3 text-[#2D3748]">
               {aboutData.subtitle}
             </h2>
 
@@ -70,7 +81,7 @@ function About() {
                   className="flex items-center gap-3"
                 >
 
-                  <FaCheckCircle className="text-orange-500" />
+                  <FaCheckCircle className="text-[#57BA98]" />
 
                   <span>{item}</span>
 
@@ -83,13 +94,14 @@ function About() {
             <button
               className="
               mt-10
-              bg-orange-500
+              bg-[#57BA98]
               text-white
               px-8
               py-3
               rounded-xl
-              hover:bg-orange-600
+              hover:bg-[#65CCB8]
               transition
+              duration-300
               "
             >
               Download CV
@@ -105,3 +117,4 @@ function About() {
 }
 
 export default About;
+

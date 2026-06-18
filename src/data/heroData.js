@@ -1,6 +1,6 @@
 const heroData = {
   greeting: "Hello, I'm",
-  name: "Varnaja Uthayaraj",
+  name: "Varnaja ",
   roles: [
     "Full Stack Developer",
     "Frontend Developer",

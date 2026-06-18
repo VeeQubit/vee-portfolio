@@ -10,9 +10,12 @@ import Education from "./components/sections/Education";
 import TechStack from "./components/sections/TechStack";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import FloatingBackground from "./components/background/FloatingBackground";
+
 function App() {
   return (
     <>
+      <FloatingBackground />
       <Navbar />
       <Hero />
       <Stats />

@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
+
 html{
   scroll-behavior:smooth;
 }
 
 body{
-  font-family:Inter,sans-serif;
+  background:#F7FCFA; overflow-x:hidden; color:#2D3748;
 }
