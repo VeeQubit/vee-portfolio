@@ -1,11 +1,33 @@
 
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useRef } from "react";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 
 import projects from "../../data/projects";
 import Container from "../common/Container";
 
 function Projects() {
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current?.scrollBy({
+      left: -400,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current?.scrollBy({
+      left: 400,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="projects"
@@ -15,8 +37,8 @@ function Projects() {
 
         <div className="text-center">
 
-          <p className="text-[#57BA98] font-semibold uppercase">
-            Portfolio
+          <p className="text-[#57BA98] font-bold uppercase">
+            My Works
           </p>
 
           <h2 className="text-5xl font-bold mt-2 text-[#2D3748]">
@@ -24,13 +46,65 @@ function Projects() {
           </h2>
 
           <p className="text-gray-500 mt-4">
-            Some projects that demonstrate my technical skills and practical
+            Some of my projects that demonstrate my technical skills and practical
             experience.
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+        {/* Arrow Buttons */}
+
+        <div className="flex justify-end gap-3 mt-10 mb-6">
+
+          <button
+            onClick={scrollLeft}
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#EDF8F5]
+              text-[#57BA98]
+              shadow
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+            "
+          >
+            <FaChevronLeft className="mx-auto" />
+          </button>
+
+          <button
+            onClick={scrollRight}
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#EDF8F5]
+              text-[#57BA98]
+              shadow
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+            "
+          >
+            <FaChevronRight className="mx-auto" />
+          </button>
+
+        </div>
+
+        {/* Horizontal Scroll */}
+
+        <div
+          ref={sliderRef}
+          className="
+            flex
+            gap-8
+            overflow-x-auto
+            scroll-smooth
+            pb-4
+            scrollbar-hide
+          "
+        >
 
           {projects.map((project) => (
 
@@ -40,18 +114,21 @@ function Projects() {
                 y: -10,
               }}
               className="
-  bg-[#E8F8F3]
-  backdrop-blur-xl
-  rounded-3xl
-  overflow-hidden
-  shadow-lg
-  border
-  border-[#E8F8F3]
-  hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-  hover:-translate-y-2
-  transition-all
-  duration-300
-"
+                min-w-[380px]
+                max-w-[380px]
+                flex-shrink-0
+                bg-[#E8F8F3]
+                backdrop-blur-xl
+                rounded-3xl
+                overflow-hidden
+                shadow-lg
+                border
+                border-[#E8F8F3]
+                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+                hover:-translate-y-2
+                transition-all
+                duration-300
+              "
             >
 
               <img
@@ -62,8 +139,8 @@ function Projects() {
                   h-56
                   object-cover
                   hover:scale-105
-transition
-duration-500
+                  transition
+                  duration-500
                 "
               />
 
@@ -84,7 +161,7 @@ duration-500
                     <span
                       key={tech}
                       className="
-                        bg-[#E8F8F3]
+                        bg-white
                         text-[#57BA98]
                         px-3
                         py-1
@@ -137,7 +214,7 @@ duration-500
                       justify-center
                       items-center
                       gap-2
-                      hover:bg-[#E8F8F3]
+                      hover:bg-white
                       transition
                     "
                   >

@@ -1,22 +1,22 @@
 const stats = [
   {
     id: 1,
-    number: "15+",
+    number: "10+",
     title: "Projects Completed",
   },
   {
     id: 2,
-    number: "10+",
+    number: "5+",
     title: "Certificates",
   },
   {
     id: 3,
-    number: "2+",
+    number: "4+",
     title: "Years Learning",
   },
   {
     id: 4,
-    number: "20+",
+    number: "10+",
     title: "Technologies",
   },
 ];

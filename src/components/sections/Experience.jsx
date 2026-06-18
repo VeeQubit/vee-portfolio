@@ -1,10 +1,29 @@
 
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import experience from "../../data/experience";
 import Container from "../common/Container";
 
 function Experience() {
+
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+    sliderRef.current?.scrollBy({
+      left: -340,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    sliderRef.current?.scrollBy({
+      left: 340,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="experience"
@@ -16,7 +35,7 @@ function Experience() {
 
         <div className="text-center mb-16">
 
-          <p className="text-[#57BA98] font-semibold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase">
             Experience
           </p>
 
@@ -30,9 +49,67 @@ function Experience() {
 
         </div>
 
-        {/* Timeline */}
+        {/* Arrow Buttons */}
 
-        <div className="max-w-4xl mx-auto">
+        <div className="flex justify-end gap-3 mb-6">
+
+          <button
+            onClick={scrollLeft}
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#E8F8F3]
+              text-[#57BA98]
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+              duration-300
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FaChevronLeft />
+          </button>
+
+          <button
+            onClick={scrollRight}
+            className="
+              w-11
+              h-11
+              rounded-full
+              bg-[#E8F8F3]
+              text-[#57BA98]
+              hover:bg-[#57BA98]
+              hover:text-white
+              transition
+              duration-300
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <FaChevronRight />
+          </button>
+
+        </div>
+
+        {/* Cards */}
+
+        <div
+          ref={sliderRef}
+          className="
+            flex
+            gap-6
+            overflow-x-auto
+            scroll-smooth
+            pb-4
+          "
+          style={{
+            scrollbarWidth: "none",
+          }}
+        >
 
           {experience.map((item, index) => (
 
@@ -42,18 +119,24 @@ function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              whileHover={{
+                y: -8,
+              }}
               className="
                 relative
+                min-w-[500px]
+max-w-[400px]
+min-h-[300px]
                 bg-white/70
                 backdrop-blur-md
                 rounded-3xl
                 shadow-lg
-                p-8
-                mb-10
+                p-7
                 border-l-4
                 border-[#57BA98]
                 border
                 border-white/40
+                flex-shrink-0
               "
             >
 
@@ -61,7 +144,7 @@ function Experience() {
                 className="
                   absolute
                   -left-3
-                  top-10
+                  top-8
                   w-5
                   h-5
                   rounded-full
@@ -73,11 +156,11 @@ function Experience() {
                 {item.duration}
               </p>
 
-              <h3 className="text-3xl font-bold mt-2 text-[#2D3748]">
+              <h3 className="text-xl font-bold mt-2 text-[#2D3748]">
                 {item.position}
               </h3>
 
-              <h4 className="text-xl text-gray-600 mt-1">
+              <h4 className="text-base text-gray-600 mt-1">
                 {item.company}
               </h4>
 
@@ -85,7 +168,7 @@ function Experience() {
                 {item.description}
               </p>
 
-              <div className="flex flex-wrap gap-3 mt-8">
+              <div className="flex flex-wrap gap-2 mt-6">
 
                 {item.skills.map((skill) => (
 
@@ -94,8 +177,8 @@ function Experience() {
                     className="
                       bg-[#E8F8F3]
                       text-[#57BA98]
-                      px-4
-                      py-2
+                      px-3
+                      py-1.5
                       rounded-full
                       text-sm
                       font-medium

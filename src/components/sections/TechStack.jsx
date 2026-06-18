@@ -34,7 +34,7 @@ function TechStack() {
 
           <div className="text-center">
 
-            <p className="text-[#57BA98] font-semibold uppercase">
+            <p className="text-[#57BA98] font-bold uppercase">
               Tech Stack
             </p>
 

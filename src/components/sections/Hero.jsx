@@ -23,23 +23,27 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#57BA98] font-semibold text-lg">
+            <p className="text-[#57BA98] font-bold text-lg">
               {heroData.greeting}
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mt-2 leading-tight text-[#2D3748]">
               {heroData.name}
             </h1>
-
+            
             <TypeAnimation
               sequence={[
+                "Computer Engineer",
+                1500,
+                "Cybersecurity Enthusiast",
+                1500,
                 "Full Stack Developer",
                 1500,
-                "Frontend Developer",
+                "Technology Explorer",
                 1500,
-                "Backend Developer",
+                "AI/ML Enthusiast",
                 1500,
-                "UI Enthusiast",
+                "UI Designer",
                 1500,
               ]}
               speed={40}

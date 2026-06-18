@@ -19,18 +19,15 @@ const projects = [
 
   {
     id: 2,
-    title: "Hostel Management System",
+    title: "ERMS",
 
     description:
-      "Student hostel management system with room allocation, payments and complaint management.",
+      "A web-based system that streamlines the process of requesting, approving, tracking, and managing organizational equipment.",
 
-    image: "/projects/hostel.png",
+    image: "/projects/ERMS.png",
 
     technologies: [
-      "PHP",
-      "MySQL",
-      "HTML",
-      "CSS",
+      "React", "Spring Boot", "Java", "MongoDB",
     ],
 
     github: "#",
@@ -39,12 +36,12 @@ const projects = [
 
   {
     id: 3,
-    title: "Connectify",
+    title: "LinkZo-Live",
 
     description:
-      "Real-time video conferencing application using WebRTC and Socket.IO.",
+     "A real-time WebRTC-based video conferencing web application that enables secure peer-to-peer video and audio communication.", 
 
-    image: "/projects/connectify.png",
+    image: "/projects/linkzo-live.png",
 
     technologies: [
       "Node.js",
@@ -58,12 +55,12 @@ const projects = [
 
   {
     id: 4,
-    title: "Sentiment Analysis",
+    title: "CPU Scheduling Algorithm Simulator",
 
     description:
-      "Machine learning model for sentiment detection in code-mixed text.",
+      "An interactive learning platform and simulation tool for CPU scheduling algorithms. The application allows users to input processes, visualize scheduling execution, calculate performance metrics such as waiting time and turnaround time, compare multiple scheduling algorithms, and identify the most efficient scheduling strategy based on system performance.",
 
-    image: "/projects/sentiment.png",
+    image: "/projects/simulator.jpg",
 
     technologies: [
       "Python",
@@ -75,42 +72,9 @@ const projects = [
     demo: "#",
   },
 
-  {
-    id: 5,
-    title: "CRUD Management System",
+ 
 
-    description:
-      "REST API based CRUD application using Node.js and Express.",
-
-    image: "/projects/crud.png",
-
-    technologies: [
-      "Node",
-      "Express",
-      "MongoDB",
-    ],
-
-    github: "#",
-    demo: "#",
-  },
-
-  {
-    id: 6,
-    title: "Smart Load",
-
-    description:
-      "Desktop application for mobile reload management built with C++.",
-
-    image: "/projects/smartload.png",
-
-    technologies: [
-      "C++",
-      "Visual Studio",
-    ],
-
-    github: "#",
-    demo: "#",
-  },
+  
 ];
 
 export default projects;

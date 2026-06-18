@@ -1,9 +1,7 @@
-
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaHeart,
 } from "react-icons/fa";
 
 import Container from "../common/Container";
@@ -21,28 +19,43 @@ function Footer() {
           </h2>
 
           <p className="text-gray-400 mt-3">
-            Full Stack Developer | Software Engineer
+            Cybersecurity Enthusiast | Computer Engineer
           </p>
 
           <div className="flex justify-center gap-8 mt-8">
 
-            <a href="#home" className="hover:text-orange-400 transition">
+            <a
+              href="#home"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
               Home
             </a>
 
-            <a href="#about" className="hover:text-orange-400 transition">
+            <a
+              href="#about"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
               About
             </a>
 
-            <a href="#skills" className="hover:text-orange-400 transition">
+            <a
+              href="#skills"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
               Skills
             </a>
 
-            <a href="#projects" className="hover:text-orange-400 transition">
+            <a
+              href="#projects"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
               Projects
             </a>
 
-            <a href="#contact" className="hover:text-orange-400 transition">
+            <a
+              href="#contact"
+              className="hover:text-[#65CCB8] transition duration-300"
+            >
               Contact
             </a>
 
@@ -54,7 +67,12 @@ function Footer() {
               href={contactData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-400 transition"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
               <FaGithub />
             </a>
@@ -63,30 +81,34 @@ function Footer() {
               href={contactData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-orange-400 transition"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
               <FaLinkedin />
             </a>
 
             <a
               href={`mailto:${contactData.email}`}
-              className="hover:text-orange-400 transition"
+              className="
+                hover:text-[#65CCB8]
+                hover:scale-110
+                transition
+                duration-300
+              "
             >
               <FaEnvelope />
             </a>
 
           </div>
 
-          <div className="border-t border-gray-700 mt-10 pt-6">
+          <div className="border-t border-[#57BA98]/20 mt-10 pt-6">
 
             <p className="text-gray-400">
-              © 2026 All Rights Reserved.
-            </p>
-
-            <p className="mt-2 flex justify-center items-center gap-2 text-gray-400">
-              Made with
-              <FaHeart className="text-red-500" />
-              using React & Tailwind CSS
+              © 2026 Vee. All Rights Reserved.
             </p>
 
           </div>
@@ -99,4 +121,3 @@ function Footer() {
 }
 
 export default Footer;
-

@@ -18,8 +18,8 @@ function App() {
       <FloatingBackground />
       <Navbar />
       <Hero />
-      <Stats />
       <About />
+      <Stats />
       <Skills />
       <Services />
       <Projects />

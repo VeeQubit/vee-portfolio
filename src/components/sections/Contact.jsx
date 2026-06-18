@@ -45,7 +45,7 @@ function Contact() {
 
         <div className="text-center mb-16">
 
-          <p className="text-[#57BA98] font-semibold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase">
             Contact
           </p>
 

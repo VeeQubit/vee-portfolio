@@ -14,7 +14,7 @@ function Skills() {
 
         <div className="text-center">
 
-          <p className="text-[#57BA98] font-semibold uppercase">
+          <p className="text-[#57BA98] font-bold uppercase">
             My Skills
           </p>
 

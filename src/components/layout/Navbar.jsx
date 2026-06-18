@@ -1,11 +1,12 @@
 
+import { useState } from "react";
 import Container from "../common/Container";
 import Logo from "../common/Logo";
-
-
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navLinks = [
     "Home",
     "About",
@@ -62,11 +63,9 @@ function Navbar() {
 
           </ul>
 
-          {/* Right Side */}
+          {/* Desktop Resume */}
 
           <div className="hidden lg:flex items-center gap-4">
-
-           
 
             <a
               href="/resume/Varnaja_Uthayaraj_CV.pdf"
@@ -88,28 +87,92 @@ function Navbar() {
               duration-300
               "
             >
-
               <FaDownload />
-
               Resume
-
             </a>
 
           </div>
 
-          {/* Mobile */}
+          {/* Mobile Toggle */}
 
           <button
+            onClick={() => setMenuOpen(!menuOpen)}
             className="
             lg:hidden
             text-3xl
             text-[#57BA98]
             "
           >
-            ☰
+            {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
 
         </nav>
+
+        {/* Mobile Menu */}
+
+        {menuOpen && (
+
+          <div
+            className="
+            lg:hidden
+            mt-2
+            rounded-3xl
+            bg-white/90
+            backdrop-blur-xl
+            shadow-lg
+            border
+            border-[#E8F8F3]
+            p-6
+            "
+          >
+
+            <div className="flex flex-col gap-5">
+
+              {navLinks.map((item) => (
+
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  onClick={() => setMenuOpen(false)}
+                  className="
+                  text-[#2D3748]
+                  font-medium
+                  hover:text-[#57BA98]
+                  transition
+                  "
+                >
+                  {item}
+                </a>
+
+              ))}
+
+              <a
+                href="/resume/Varnaja_Uthayaraj_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                mt-2
+                flex
+                justify-center
+                items-center
+                gap-2
+                bg-[#57BA98]
+                text-white
+                py-3
+                rounded-full
+                hover:bg-[#65CCB8]
+                transition
+                "
+              >
+                <FaDownload />
+                Resume
+              </a>
+
+            </div>
+
+          </div>
+
+        )}
 
       </Container>
     </header>

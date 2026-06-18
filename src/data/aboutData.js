@@ -1,13 +1,16 @@
 const aboutData = {
   title: "About Me",
 
-  subtitle: "Passionate Full Stack Developer",
+  subtitle: "Computer Engineer",
 
   description:
-    "I am a passionate Full Stack Developer who enjoys building modern, scalable and responsive web applications. I continuously learn new technologies and enjoy solving real-world problems through software development.",
+    "Computer Engineering undergraduate passionate about Cyber Security and Full Stack Development. I enjoy building secure, scalable, and modern web applications while continuously exploring new technologies and creating innovative solutions to real-world problems.",
 
   points: [
+    "Secure Web Application Development",
+    "Security-First Software Development",
     "Responsive Web Development",
+     "Secure API Design & Implementation",
     "Frontend & Backend Development",
     "REST API Development",
     "Database Design",

@@ -1,4 +1,13 @@
 const skills = [
+   {
+  category: "Cyber Security",
+  items: [
+    "Kali Linux",
+    "Wireshark",
+    "Nmap",
+    "Burp Suite",
+  ],
+},
   {
     category: "Frontend",
     items: [
@@ -19,15 +28,7 @@ const skills = [
     ],
   },
 
-  {
-  category: "Cyber Security",
-  items: [
-    "Kali Linux",
-    "Wireshark",
-    "Nmap",
-    "Burp Suite",
-  ],
-},
+ 
 
   {
     category: "Database",

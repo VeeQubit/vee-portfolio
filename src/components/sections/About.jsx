@@ -60,7 +60,7 @@ function About() {
             viewport={{ once: true }}
           >
 
-            <h5 className="text-[#57BA98] font-semibold">
+            <h5 className="text-[#57BA98] font-bold">
               ABOUT ME
             </h5>
 
@@ -91,21 +91,27 @@ function About() {
 
             </div>
 
-            <button
-              className="
-              mt-10
-              bg-[#57BA98]
-              text-white
-              px-8
-              py-3
-              rounded-xl
-              hover:bg-[#65CCB8]
-              transition
-              duration-300
-              "
-            >
-              Download CV
-            </button>
+            
+<a
+  href="/resume/Varnaja_Uthayaraj_CV.pdf"
+  download
+  className="
+    inline-block
+    mt-10
+    bg-[#57BA98]
+    text-white
+    px-8
+    py-3
+    rounded-xl
+    hover:bg-[#65CCB8]
+    transition
+    duration-300
+  "
+>
+  Download CV
+</a>
+
+
 
           </motion.div>
 
