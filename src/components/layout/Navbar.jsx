@@ -1,7 +1,7 @@
 
 import Container from "../common/Container";
 import Logo from "../common/Logo";
-import ThemeToggle from "../ui/ThemeToggle";
+
 
 import { FaDownload } from "react-icons/fa";
 
@@ -66,7 +66,7 @@ function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
 
-            <ThemeToggle />
+           
 
             <a
               href="/resume/Varnaja_Uthayaraj_CV.pdf"

@@ -22,10 +22,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_ic1n71d",
-        "template_4hku6vs",
+        "service_ryl4kv3",
+        "template_wunkm0v",
         form.current,
-        "V6PY8zshduzNSZJiI"
+        "j0LMzmzL68KlOFbRr"
       )
       .then(() => {
         toast.success("Message sent successfully!");

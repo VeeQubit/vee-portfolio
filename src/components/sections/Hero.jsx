@@ -53,38 +53,46 @@ function Hero() {
 
             <div className="flex flex-wrap gap-5 mt-10">
 
-              <button
-                className="
-                bg-[#57BA98]
-                text-white
-                px-7
-                py-3
-                rounded-xl
-                shadow-lg
-                hover:bg-[#65CCB8]
-                hover:scale-105
-                transition
-                duration-300
-                "
-              >
-                Hire Me
-              </button>
+              <a
+  href="#contact"
+  className="
+    bg-[#57BA98]
+    text-white
+    px-7
+    py-3
+    rounded-xl
+    shadow-lg
+    hover:bg-[#65CCB8]
+    hover:scale-105
+    transition
+    duration-300
+    inline-flex
+    items-center
+    justify-center
+  "
+>
+  Hire Me
+</a>
 
-              <button
-                className="
-                border-2
-                border-[#57BA98]
-                px-7
-                py-3
-                rounded-xl
-                hover:bg-[#E8F8F3]
-                hover:scale-105
-                transition
-                duration-300
-                "
-              >
-                View Projects
-              </button>
+              <a
+  href="#projects"
+  className="
+    border-2
+    border-[#57BA98]
+    px-7
+    py-3
+    rounded-xl
+    hover:bg-[#E8F8F3]
+    hover:scale-105
+    transition
+    duration-300
+    inline-flex
+    items-center
+    justify-center
+  "
+>
+  View Projects
+</a>
 
             </div>
 
