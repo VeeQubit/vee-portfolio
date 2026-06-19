@@ -22,18 +22,19 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_ryl4kv3",
+        "service_4tzvlru",
         "template_wunkm0v",
         form.current,
-        "j0LMzmzL68KlOFbRr"
+        "6JfKjus1ldVT99VHW"
       )
       .then(() => {
         toast.success("Message sent successfully!");
         form.current.reset();
       })
-      .catch(() => {
-        toast.error("Failed to send message!");
-      });
+      .catch((error) => {
+  console.log(error);
+  toast.error(error.text || "Failed to send message!");
+});
   };
 
   return (
