@@ -8,3 +8,7 @@ html{
 body{
   background:#F7FCFA; overflow-x:hidden; color:#2D3748;
 }
+root {
+  width: 100%;
+  overflow-x: hidden;
+}

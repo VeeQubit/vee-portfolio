@@ -15,6 +15,7 @@ import FloatingBackground from "./components/background/FloatingBackground";
 function App() {
   return (
     <>
+    <div className="overflow-x-hidden">
       <FloatingBackground />
       <Navbar />
       <Hero />
@@ -28,6 +29,7 @@ function App() {
       <TechStack />
       <Contact />
       <Footer />
+      </div>
     </>
   );
 }
