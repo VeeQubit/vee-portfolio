@@ -11,7 +11,7 @@ function About() {
   return (
     <section
       id="about"
-      className="py-28 bg-transparent"
+      className="py-28 bg-transparent "
     >
       <Container>
 
