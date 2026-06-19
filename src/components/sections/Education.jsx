@@ -125,7 +125,10 @@ function Education() {
               <div
                 key={index}
                 className="
-  w-[340px]
+  w-[90vw]
+sm:w-[320px]
+md:w-[340px]
+lg:w-[340px]
   h-[250px]
   flex-shrink-0
   bg-[#EDF8F5]
@@ -241,7 +244,11 @@ function Education() {
               <div
                 key={index}
                 className="
-                  min-w-[320px]
+                  w-[90vw]
+sm:w-[300px]
+md:w-[320px]
+lg:w-[320px]
+flex-shrink-0
                   bg-[#EDF8F5]
                   rounded-3xl
                   shadow-[0_10px_30px_rgba(87,186,152,0.12)]

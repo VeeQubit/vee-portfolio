@@ -14,7 +14,9 @@ import FloatingBackground from "./components/background/FloatingBackground";
 
 function App() {
   return (
+    
     <>
+
       <FloatingBackground />
       <Navbar />
       <Hero />

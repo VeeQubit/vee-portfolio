@@ -124,9 +124,12 @@ function Experience() {
               }}
               className="
                 relative
-                min-w-[340px]
-max-w-[360px]
-min-h-[300px]
+                w-[90vw]
+sm:w-[340px]
+md:w-[360px]
+lg:w-[380px]
+
+                min-h-[300px]
                 bg-white/70
                 backdrop-blur-md
                 rounded-3xl
