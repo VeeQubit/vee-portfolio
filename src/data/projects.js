@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     description:
-      "Modern responsive portfolio built using React, Tailwind CSS and Framer Motion.",
+      "A modern, fully responsive personal portfolio website showcasing my projects, technical skills, certifications, and experience.",
 
     image: "/projects/portfolio.png",
 
@@ -55,10 +55,10 @@ const projects = [
 
   {
     id: 4,
-    title: "CPU Scheduling Algorithm Simulator",
+    title: "CPU Scheduling simulator",
 
     description:
-      "An interactive learning platform and simulation tool for CPU scheduling algorithms. The application allows users to input processes, visualize scheduling execution, calculate performance metrics such as waiting time and turnaround time, compare multiple scheduling algorithms, and identify the most efficient scheduling strategy based on system performance.",
+      "CPU scheduling simulator for visualizing process execution, comparing algorithms, and analyzing waiting and turnaround times.",
 
     image: "/projects/simulator.jpg",
 

@@ -114,34 +114,33 @@ function Projects() {
                 y: -10,
               }}
               className="
-                min-w-[380px]
-                max-w-[380px]
-                flex-shrink-0
-                bg-[#E8F8F3]
-                backdrop-blur-xl
-                rounded-3xl
-                overflow-hidden
-                shadow-lg
-                border
-                border-[#E8F8F3]
-                hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
-                hover:-translate-y-2
-                transition-all
-                duration-300
-              "
+  w-[380px]
+  flex-shrink-0
+  bg-[#E8F8F3]
+  backdrop-blur-xl
+  rounded-3xl
+  overflow-hidden
+  shadow-lg
+  border
+  border-[#E8F8F3]
+  hover:shadow-[0_15px_35px_rgba(87,186,152,0.18)]
+  hover:-translate-y-2
+  transition-all
+  duration-300
+"
             >
 
               <img
                 src={project.image}
                 alt={project.title}
                 className="
-                  w-full
-                  h-56
-                  object-cover
-                  hover:scale-105
-                  transition
-                  duration-500
-                "
+    w-full
+    aspect-[16/9]
+    object-cover
+    object-top
+    transition
+    duration-500
+  "
               />
 
               <div className="p-6">

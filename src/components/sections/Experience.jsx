@@ -124,8 +124,8 @@ function Experience() {
               }}
               className="
                 relative
-                min-w-[500px]
-max-w-[400px]
+                min-w-[340px]
+max-w-[360px]
 min-h-[300px]
                 bg-white/70
                 backdrop-blur-md

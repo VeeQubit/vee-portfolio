@@ -125,7 +125,7 @@ function Education() {
               <div
                 key={index}
                 className="
-  w-[380px]
+  w-[340px]
   h-[250px]
   flex-shrink-0
   bg-[#EDF8F5]
