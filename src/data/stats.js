@@ -11,7 +11,7 @@ const stats = [
   },
   {
     id: 3,
-    number: "4+",
+    number: "3+",
     title: "Years Learning",
   },
   {
