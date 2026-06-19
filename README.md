@@ -4,7 +4,7 @@ A modern and responsive personal portfolio website built to showcase my projects
 
 ## 🚀 Live Demo
 
-> https://veeportfolio-jaanu.vercel.app/
+> [https://(https://veeportfolio-varnaja.vercel.app/)
 
 
 
@@ -85,12 +85,12 @@ src/
 
 Clone the repository:
 
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/VeeQubit/my-portfolio.git
 
 
 Navigate to the project:
 
-cd your-repository
+cd my-portfolio
 
 
 Install dependencies:
